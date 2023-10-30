@@ -1,11 +1,7 @@
 extends VBoxContainer
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+var board : Array
+var player : String
+var is_winner : bool = false
+var is_gameover :bool = false
+var 
