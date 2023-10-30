@@ -14,6 +14,18 @@ config/name="calculatedjourny"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=96
+window/size/viewport_height=96
+window/size/mode=3
+
 [dotnet]
 
 project/assembly_name="calculatedjourny"
+
+[navigation]
+
+2d/size/mode=0
+2d/size/viewport_width=1152
+2d/size/viewport_height=1000
