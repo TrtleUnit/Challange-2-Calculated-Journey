@@ -6,9 +6,9 @@
 script = ExtResource("1_khv3c")
 
 [node name="Menu" type="VBoxContainer" parent="."]
-offset_left = 520.0
+offset_left = 512.0
 offset_top = 192.0
-offset_right = 632.0
+offset_right = 640.0
 offset_bottom = 320.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -48,6 +48,24 @@ offset_top = 544.0
 offset_right = 597.0
 offset_bottom = 575.0
 text = "Back"
+
+[node name="Temp" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 64.0
+offset_right = 656.0
+offset_bottom = 90.0
+text = "Under Construction"
+horizontal_alignment = 1
+
+[node name="Settings" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 40.0
+offset_right = 640.0
+offset_bottom = 63.0
+text = "Settings"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Menu/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Menu/Options" to="." method="_on_options_pressed"]
