@@ -5,6 +5,16 @@
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_khv3c")
 
+[node name="Label" type="Label" parent="."]
+offset_left = 448.0
+offset_top = 8.0
+offset_right = 704.0
+offset_bottom = 34.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Calculated Journey"
+horizontal_alignment = 1
+
 [node name="Menu" type="VBoxContainer" parent="."]
 offset_left = 512.0
 offset_top = 192.0
@@ -20,6 +30,10 @@ text = "Play"
 [node name="Options" type="Button" parent="Menu"]
 layout_mode = 2
 text = "Options"
+
+[node name="How To Play" type="Button" parent="Menu"]
+layout_mode = 2
+text = "How to Play"
 
 [node name="Quit" type="Button" parent="Menu"]
 layout_mode = 2
@@ -67,7 +81,162 @@ offset_bottom = 63.0
 text = "Settings"
 horizontal_alignment = 1
 
+[node name="How To Play" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Back" type="Button" parent="How To Play"]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 544.0
+offset_right = 597.0
+offset_bottom = 575.0
+text = "Back"
+
+[node name="Label" type="Label" parent="How To Play"]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 40.0
+offset_right = 640.0
+offset_bottom = 66.0
+text = "How To Play"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="How To Play"]
+layout_mode = 2
+offset_left = 320.0
+offset_top = 128.0
+offset_right = 832.0
+offset_bottom = 444.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="How To Play"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 124.0
+offset_right = 832.0
+offset_bottom = 444.0
+
+[node name="1" type="Control" parent="How To Play/VBoxContainer"]
+layout_mode = 2
+
+[node name="Forward" type="Button" parent="How To Play/VBoxContainer/1"]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 288.0
+offset_right = 512.0
+offset_bottom = 319.0
+text = ">"
+
+[node name="Label" type="Label" parent="How To Play/VBoxContainer/1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "1/4"
+
+[node name="Label2" type="Label" parent="How To Play/VBoxContainer/1"]
+offset_left = 232.0
+offset_top = 4.0
+offset_right = 280.0
+offset_bottom = 30.0
+text = "Temp "
+
+[node name="2" type="Control" parent="How To Play/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Forward2" type="Button" parent="How To Play/VBoxContainer/2"]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 288.0
+offset_right = 512.0
+offset_bottom = 319.0
+text = ">"
+
+[node name="Backwards" type="Button" parent="How To Play/VBoxContainer/2"]
+offset_top = 288.0
+offset_right = 24.0
+offset_bottom = 319.0
+text = "<"
+
+[node name="Label" type="Label" parent="How To Play/VBoxContainer/2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 26.0
+text = "2/4"
+
+[node name="Label2" type="Label" parent="How To Play/VBoxContainer/2"]
+offset_left = 232.0
+offset_top = 4.0
+offset_right = 280.0
+offset_bottom = 30.0
+text = "Temp "
+
+[node name="3" type="Control" parent="How To Play/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Forward3" type="Button" parent="How To Play/VBoxContainer/3"]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 288.0
+offset_right = 512.0
+offset_bottom = 319.0
+text = ">"
+
+[node name="Backwards2" type="Button" parent="How To Play/VBoxContainer/3"]
+offset_top = 288.0
+offset_right = 24.0
+offset_bottom = 319.0
+text = "<"
+
+[node name="Label" type="Label" parent="How To Play/VBoxContainer/3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 26.0
+text = "3/4"
+
+[node name="Label2" type="Label" parent="How To Play/VBoxContainer/3"]
+offset_left = 232.0
+offset_top = 4.0
+offset_right = 280.0
+offset_bottom = 30.0
+text = "Temp "
+
+[node name="4" type="Control" parent="How To Play/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Backwards3" type="Button" parent="How To Play/VBoxContainer/4"]
+offset_top = 288.0
+offset_right = 24.0
+offset_bottom = 319.0
+text = "<"
+
+[node name="Label" type="Label" parent="How To Play/VBoxContainer/4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 26.0
+text = "4/4"
+
+[node name="Label2" type="Label" parent="How To Play/VBoxContainer/4"]
+offset_left = 232.0
+offset_top = 4.0
+offset_right = 280.0
+offset_bottom = 30.0
+text = "Temp "
+
 [connection signal="pressed" from="Menu/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Menu/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Menu/How To Play" to="." method="_on_how_to_play_pressed"]
 [connection signal="pressed" from="Menu/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Options/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="How To Play/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="How To Play/VBoxContainer/1/Forward" to="." method="_on_forward_pressed"]
+[connection signal="pressed" from="How To Play/VBoxContainer/2/Forward2" to="." method="_on_forward_2_pressed"]
+[connection signal="pressed" from="How To Play/VBoxContainer/2/Backwards" to="." method="_on_backwards_pressed"]
+[connection signal="pressed" from="How To Play/VBoxContainer/3/Forward3" to="." method="_on_forward_3_pressed"]
+[connection signal="pressed" from="How To Play/VBoxContainer/3/Backwards2" to="." method="_on_backwards_2_pressed"]
+[connection signal="pressed" from="How To Play/VBoxContainer/4/Backwards3" to="." method="_on_backwards_3_pressed"]
