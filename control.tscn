@@ -1,7 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbl8p38tjayq7"]
+[gd_scene load_steps=16 format=3 uid="uid://bbl8p38tjayq7"]
 
-[ext_resource type="Script" path="res://row1.gd" id="1_byw7j"]
-[ext_resource type="Script" path="res://board.cs" id="1_cq2q5"]
+[ext_resource type="Script" path="res://control.gd" id="1_v1oks"]
+[ext_resource type="Script" path="res://Button.gd" id="2_rmasn"]
+[ext_resource type="Script" path="res://Button2.gd" id="3_15dlw"]
+[ext_resource type="Script" path="res://Button3.gd" id="4_02bed"]
+[ext_resource type="Script" path="res://Button4.gd" id="5_i0cxc"]
+[ext_resource type="Script" path="res://Button5.gd" id="6_variq"]
+[ext_resource type="Script" path="res://Button6.gd" id="7_1ihut"]
+[ext_resource type="Script" path="res://Button7.gd" id="8_n1tf5"]
+[ext_resource type="Script" path="res://Button8.gd" id="9_k6cow"]
+[ext_resource type="Script" path="res://Button9.gd" id="10_8jfch"]
+[ext_resource type="Script" path="res://Button10.gd" id="11_s2hob"]
+[ext_resource type="Script" path="res://Button11.gd" id="12_j6bla"]
+[ext_resource type="Script" path="res://Button12.gd" id="13_fmq65"]
+[ext_resource type="Script" path="res://Button13.gd" id="14_nha00"]
+[ext_resource type="Script" path="res://Label.gd" id="15_d5tr6"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,73 +23,110 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+script = ExtResource("1_v1oks")
 
-[node name="board" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(96, 96)
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_right = 96.0
-offset_bottom = 96.0
-alignment = 1
-script = ExtResource("1_cq2q5")
+offset_left = 83.0
+offset_top = 315.0
+offset_right = 495.0
+offset_bottom = 1137.0
 
-[node name="row1" type="HBoxContainer" parent="board"]
-layout_mode = 2
-script = ExtResource("1_byw7j")
-
-[node name="button1" type="TextureButton" parent="board/row1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
-[node name="button2" type="TextureButton" parent="board/row1"]
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("2_rmasn")
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("3_15dlw")
+
+[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("4_02bed")
+
+[node name="Button4" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("5_i0cxc")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
-[node name="button3" type="TextureButton" parent="board/row1"]
+[node name="Button5" type="Button" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("6_variq")
+
+[node name="Button6" type="Button" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("7_1ihut")
+
+[node name="Button7" type="Button" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("8_n1tf5")
+
+[node name="Button8" type="Button" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("9_k6cow")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
-[node name="button4" type="TextureButton" parent="board/row1"]
+[node name="Button9" type="Button" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("10_8jfch")
+
+[node name="Button10" type="Button" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("11_s2hob")
+
+[node name="Button11" type="Button" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("12_j6bla")
+
+[node name="Button12" type="Button" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("13_fmq65")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
-[node name="row2" type="HBoxContainer" parent="board"]
+[node name="Button13" type="Button" parent="VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("14_nha00")
+
+[node name="Button14" type="Button" parent="VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
-[node name="button5" type="TextureButton" parent="board/row2"]
+[node name="Button15" type="Button" parent="VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
-[node name="button6" type="TextureButton" parent="board/row2"]
+[node name="Button16" type="Button" parent="VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
-[node name="button7" type="TextureButton" parent="board/row2"]
+[node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-
-[node name="button8" type="TextureButton" parent="board/row2"]
-layout_mode = 2
-
-[node name="row3" type="HBoxContainer" parent="board"]
-layout_mode = 2
-
-[node name="button9" type="TextureButton" parent="board/row3"]
-layout_mode = 2
-
-[node name="button10" type="TextureButton" parent="board/row3"]
-layout_mode = 2
-
-[node name="button11" type="TextureButton" parent="board/row3"]
-layout_mode = 2
-
-[node name="button12" type="TextureButton" parent="board/row3"]
-layout_mode = 2
-
-[node name="row4" type="HBoxContainer" parent="board"]
-layout_mode = 2
-
-[node name="button13" type="TextureButton" parent="board/row4"]
-layout_mode = 2
-
-[node name="button14" type="TextureButton" parent="board/row4"]
-layout_mode = 2
-
-[node name="button15" type="TextureButton" parent="board/row4"]
-layout_mode = 2
-
-[node name="button16" type="TextureButton" parent="board/row4"]
-layout_mode = 2
+script = ExtResource("15_d5tr6")
