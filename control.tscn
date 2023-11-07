@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bbl8p38tjayq7"]
+[gd_scene load_steps=15 format=3 uid="uid://bbl8p38tjayq7"]
 
 [ext_resource type="Script" path="res://control.gd" id="1_v1oks"]
 [ext_resource type="Script" path="res://Button.gd" id="2_rmasn"]
@@ -14,7 +14,6 @@
 [ext_resource type="Script" path="res://Button11.gd" id="12_j6bla"]
 [ext_resource type="Script" path="res://Button12.gd" id="13_fmq65"]
 [ext_resource type="Script" path="res://Button13.gd" id="14_nha00"]
-[ext_resource type="Script" path="res://Label.gd" id="15_d5tr6"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -32,6 +31,10 @@ offset_left = 83.0
 offset_top = 315.0
 offset_right = 495.0
 offset_bottom = 1137.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
@@ -125,8 +128,3 @@ layout_mode = 2
 [node name="Button16" type="Button" parent="VBoxContainer/HBoxContainer4"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-
-[node name="Button" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-script = ExtResource("15_d5tr6")
