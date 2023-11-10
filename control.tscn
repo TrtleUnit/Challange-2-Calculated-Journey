@@ -40,7 +40,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Button1" type="Button" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 script = ExtResource("2_rmasn")
@@ -127,4 +127,16 @@ layout_mode = 2
 
 [node name="Button16" type="Button" parent="VBoxContainer/HBoxContainer4"]
 custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 0
+offset_left = 505.0
+offset_top = 314.0
+offset_right = 1095.0
+offset_bottom = 446.0
+
+[node name="Button" type="Button" parent="VBoxContainer2"]
+custom_minimum_size = Vector2(96, 96)
 layout_mode = 2

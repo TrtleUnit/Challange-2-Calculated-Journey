@@ -5,7 +5,10 @@ func _ready():
 	generate_operator2()
 	generate_operator3()
 	generate_operator4()
+	generate_number1()
 	generate_math()
+
+
 func generate_operator1():
 	var operators = ['+', '-', '*', '/']
 	var random_operator = operators[randi() % operators.size()]
@@ -40,3 +43,11 @@ func generate_math():
 
 	var text = str(result)
 	$VBoxContainer/Button.text = text
+	
+func generate_number1():
+	var random_number = randi() % 20 + 1
+	random_number = str(random_number)
+	$VBoxContainer/HBoxContainer/Button1.text = random_number
+	
+	
+
